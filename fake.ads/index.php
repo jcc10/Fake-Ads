@@ -8,11 +8,10 @@
 
 	<body>
 		<div id="container">
-			<div id="header">
-				<h1>Cáus-Solutions</h1>
-				<h2><em>Pay what you want</em> Tech-support</h2>
-				<br />
-				<hr />
+			<div id="header"><?php
+				include "/WebFiles/caus-solutions.net/CORE_static_dynamic.php";
+				sd_head();
+			?>
 			</div> <!-- end header -->
 			<div class="spacer"></div>
 			<div id="left">
@@ -20,9 +19,7 @@
 				<div id="leftcontent">
 
 					<?php
-						include "/WebFiles/caus-solutions.net/static_dynamic.php";
-						sd_con("fake_ads");
-						sd_side("Fake Ad's");
+						sd_side("Home");
 					?>
 					<p>&nbsp;</p>
 					<h3>Disclaimer</h3>

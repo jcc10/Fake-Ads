@@ -1,0 +1,33 @@
+[Tue Apr 28 19:37:02 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.html denied
+[Tue Apr 28 19:37:02 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.cgi denied
+[Tue Apr 28 19:37:02 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.pl denied
+[Tue Apr 28 19:37:02 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.php denied
+[Tue Apr 28 19:37:02 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.xhtml denied
+[Tue Apr 28 19:37:02 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.htm denied
+[Tue Apr 28 19:37:02 2015] [error] [client 73.2.14.72] File does not exist: /WebFiles/caus-solutions.net/static/favicon.ico
+[Tue Apr 28 19:37:02 2015] [error] [client 73.2.14.72] File does not exist: /WebFiles/caus-solutions.net/static/favicon.ico
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.html denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.cgi denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.pl denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.php denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.xhtml denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /img/index.htm denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.html denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.cgi denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.pl denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.php denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.xhtml denied
+[Tue Apr 28 19:37:34 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.htm denied
+[Tue Apr 28 19:37:51 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.html denied
+[Tue Apr 28 19:37:51 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.cgi denied
+[Tue Apr 28 19:37:51 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.pl denied
+[Tue Apr 28 19:37:51 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.php denied
+[Tue Apr 28 19:37:51 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.xhtml denied
+[Tue Apr 28 19:37:51 2015] [error] [client 73.2.14.72] (13)Permission denied: access to /logs/index.htm denied
+[Tue Apr 28 19:46:07 2015] [error] [client 73.2.14.72] (13)Permission denied: file permissions deny server access: /WebFiles/caus-solutions.net/static/img/vcss-blue.gif, referer: http://caus-solutions.com/
+[Tue Apr 28 19:46:07 2015] [error] [client 73.2.14.72] File does not exist: /WebFiles/caus-solutions.net/static/img/valid-xhtml11-blue.png, referer: http://caus-solutions.com/
+[Tue Apr 28 19:46:09 2015] [error] [client 73.2.14.72] File does not exist: /WebFiles/caus-solutions.net/static/img/valid-xhtml11-blue.png, referer: http://caus-solutions.com/
+[Tue Apr 28 19:46:09 2015] [error] [client 73.2.14.72] (13)Permission denied: file permissions deny server access: /WebFiles/caus-solutions.net/static/img/vcss-blue.gif, referer: http://caus-solutions.com/
+[Tue Apr 28 19:46:42 2015] [error] [client 73.2.14.72] File does not exist: /WebFiles/caus-solutions.net/static/img/valid-xhtml11-blue.png, referer: http://caus-solutions.com/
+[Tue Apr 28 19:47:28 2015] [error] [client 73.2.14.72] File does not exist: /WebFiles/caus-solutions.net/static/img/valid-xhtml11-blue.png, referer: http://caus-solutions.com/
+[Tue Apr 28 19:52:01 2015] [error] [client 73.2.14.72] PHP Notice:  Array to string conversion in /WebFiles/caus-solutions.net/static/img/index.php on line 4

@@ -1,12 +1,12 @@
 <?php
 // CONFIGURATION FILE
-$IAM_relative = getcwd() . "/../";
+$IAM_relative = getcwd() . "/../../";
 $TmpLoc = $IAM_relative . "local_configuration.php";
 include $TmpLoc;
 
 /* Header */
 function sd_head($page) {
-	echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n\t<head>\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />\n\t\t<title>Fake Ad's: " . $page . "</title>\n\t\t<link href=\"menu_style.css\" rel=\"stylesheet\" type=\"text/css\" />\n\t</head>\n";
+	echo "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.1//EN\" \"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n\t<head>\n\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=iso-8859-1\" />\n\t\t<title>Fake Ad's: " . $page . "</title>\n\t\t<link href=\"ad_style.css\" rel=\"stylesheet\" type=\"text/css\" />\n\t</head>\n";
 }
 
 /* Title */
@@ -36,7 +36,7 @@ function sd_foot() {
 		echo "$sd_tab\t | <a href=\"http://jigsaw.w3.org/css-validator/\"><img src=\"/static/IMG/vcss-blue.gif\" alt=\"CSS Level 3\" title=\"CSS Level 3\"></img></a> | \n$sd_tab\t\t<a href=\"http://validator.w3.org/check?uri=referer\"><img src=\"/static/IMG/valid-xhtml11-blue.png\" alt=\"XHTML 1.1\" title=\"XHTML 1.1\"></img></a>";
 	// Right
 	echo "$sd_tab<p class=\"right\">\n";
-	echo "$sd_tab\t<a href=\"" . $fa_root . "/credits.php\">Click here to view source tree.</a><br />\n";
+	echo "$sd_tab\t<a href=\"" . $fa_my_domain . "/credits.php\">Click here to view source tree.</a><br />\n";
 	echo "$sd_tab\t&copy;2015 C&#225;us Solutions<br />&nbsp;\n";
 	echo "$sd_tab</p>\n";
 }

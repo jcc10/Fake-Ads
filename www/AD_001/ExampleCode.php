@@ -11,8 +11,9 @@ include $TmpLoc;
 
 // Implementation Variables IE: where logos are.
 $implement = array();
-$implement["IMG DIR BROWSERS"] = $local_directory . "logos/browsers/";
-$implement["IMG DIR OS"] = $local_directory . "logos/OS/";
+$implement["ToRoot"] = "/";
+$implement["IMG DIR BROWSERS"] = $implement["ToRoot"] . "logos/browsers/";
+$implement["IMG DIR OS"] = $implement["ToRoot"] . "logos/OS/";
 
 //	Example Code Formatting
 function send($Title, $Content, $DEBUG = "false") {

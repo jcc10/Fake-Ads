@@ -1,5 +1,5 @@
 # File with configurations, Copy the other one.
-CORE_static_dynamic.php
+local_configuration.php
 
 # Log files should not be public
 logs

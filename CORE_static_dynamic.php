@@ -1,8 +1,9 @@
 <?php
 // CONFIGURATION FILE
-$sd_host = "C&#225;us Solutions";
-$sd_host_URL = "http://www.caus-solutions.com";
-$sd_my_domain = "";
+include "./CORE_Configuration.php";
+$sd_host = $fa_host;
+$sd_host_URL = $fa_host_URL;
+$sd_my_domain = $fa_my_domain;
 
 /* Header */
 function sd_head($origin) {

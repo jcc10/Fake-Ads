@@ -1,16 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Cáus-Solutions: Home</title>
-		<link href="menu_style.css" rel="stylesheet" type="text/css" />
-	</head>
-
+<html xmlns="http://www.w3.org/1999/xhtml"><?php
+	include "./static_dynamic.php";
+	sd_head("Home");
+?>
 	<body>
 		<div id="container">
 			<div id="header"><?php
-				include "/WebFiles/caus-solutions.net/CORE_static_dynamic.php";
-				sd_head();
+				sd_title();
 			?>
 			</div> <!-- end header -->
 			<div class="spacer"></div>

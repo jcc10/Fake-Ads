@@ -3,14 +3,14 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>Cáus-Solutions: Home</title>
-		<link href="menu_style.css" rel="stylesheet" type="text/css" />
+		<link href="./ad_style.css" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
 		<div id="container">
 			<div id="header"><?PHP
-			include "/WebFiles/caus-solutions.net/CORE_static_dynamic.php";
-			sd_head()
+			include "./../../CORE_static_dynamic.php";
+			sd_head();
 			?>
 			</div> <!-- end header -->
 
@@ -35,7 +35,8 @@
 				<!-- BEGIN UserAgent PHP CODE -->
 <?php
 /*				BEGIN CODE				*/
-include "ExampleCode.php";
+$TmpLoc = $local_directory . "www/AD_001/ExampleCode.php";
+include $TmpLoc;
 
 // Prints Browser Data 
 function PrintBrowser($BrowserArray, $ImgDir) {

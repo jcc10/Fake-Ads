@@ -1,15 +1,18 @@
 <?php
 //	Load CORE API TOOLS
-include "CoreAPItools.php";
+$TmpLoc = $local_directory . "www/SharedPHP/CoreAPItools.php";
+include $TmpLoc;
 
 //	Load BROWSERS & OS's ID'ing Code
-include "browsers.php";
-include "OperatingSystems.php";
+$TmpLoc = $local_directory . "www/SharedPHP/browsers.php";
+include $TmpLoc;
+$TmpLoc = $local_directory . "www/SharedPHP/OperatingSystems.php";
+include $TmpLoc;
 
 // Implementation Variables IE: where logos are.
 $implement = array();
-$implement["IMG DIR BROWSERS"] = "./logos/browsers/";
-$implement["IMG DIR OS"] = "./logos/OS/";
+$implement["IMG DIR BROWSERS"] = $local_directory . "logos/browsers/";
+$implement["IMG DIR OS"] = $local_directory . "logos/OS/";
 
 //	Example Code Formatting
 function send($Title, $Content, $DEBUG = "false") {

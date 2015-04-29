@@ -1,19 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>Cáus-Solutions: Home</title>
-		<link href="style.css" rel="stylesheet" type="text/css" />
-	</head>
-
+<html xmlns="http://www.w3.org/1999/xhtml"><?php
+	include "./static_dynamic.php";
+	sd_head("Home");
+?>
 	<body>
 		<div id="container">
-			<div id="header">
-				<h1>Cáus-Solutions</h1>
-				<h2><em>Pay what you want</em> Tech-support</h2>
-				<br />
-				<hr />
-
+			<div id="header"><?php
+				sd_title();
+			?>
 			</div> <!-- end header -->
 
 			<div class="spacer"></div>
@@ -22,8 +16,6 @@
 				<div id="leftcontent">
 
 					<?php
-						include "/WebFiles/caus-solutions.net/static_dynamic.php";
-						sd_con("www");
 						sd_side("Credits");
 					?>
 					<p>&nbsp;</p><!--
@@ -39,24 +31,21 @@
 				<div id="maincontent">
 
 					<!-- Who built this? -->
-					<h3 class="top_main_heading">Who built this?</h3>
-					<p>This website's template has a bit of a history. It has been re-done by several people.
+					<h3 class="top_main_heading">Template</h3>
+					<p>Click <a href="credits_template.php">HERE</a> to view who coded the main site's template.
 					</p>
 					
 					<!-- Revision 1 -->
-					<h3>Revision 1</h3>
-					<p>The first revision was Adam Particka's autonomous template.<br />
-					(Copyright &copy; 2004, Adam Particka. All Rights Reserved.)<br />
-					You can find it <a href="http://www.oswd.org/design/preview/id/1570/">HERE</a>!</p>
+					<h3>Ad's</h3>
+					<p>Click HERE to view who coded each AD!</p>
 					
 					<!-- Revision 2 -->
-					<h3>Revision 2</h3>
-					<p>The next revision was made by  Matt Hollis (&copy;2006)<br />His template can be found <a href="http://www.oswd.org/design/preview/id/2613/">HERE</a>!</p>
+					<h3>Core Code</h3>
+					<p>Click HERE to view who coded the Core Code for this project!</p>
 					
 					<!-- Revision 3 -->
-					<h3>Revision 3</h3>
-					<p>Revision 3 was made by Cáus Solutions for our website, some code was copyed from the osTicket's template, other areas was simply re-coded to fit our style.<br />
-					Design &copy;2015 Cáus Solutions. Contact Us if you want to use it.</p>
+					<!--<h3>Other</h3>
+					<p>Other notable people who don't really fit into any category.</p>-->
 				</div> <!-- end main content section -->
 			</div> 
 			<div id="footer"><div class="spacer"></div>

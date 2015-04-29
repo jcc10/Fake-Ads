@@ -1,0 +1,253 @@
+body {
+	font-family:arial, verdana, helvetica, sans-serif;
+	font-size:12px;
+	/* cursor:default; */
+	color:#FF0000;
+	background: url('/static/IMG/page_bg.png') top left repeat-x #c8c8c8;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+	text-decoration: none;
+}
+html {
+	height:100%;
+	margin-bottom:1px;
+}
+#container {
+  background: #fff;
+	width: 840px;
+  margin: 0 auto;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+#header {
+	cursor:default;
+	width:100%;
+	padding-top:15px;
+	margin-left:10px;
+	margin-right:10px;
+	max-width:97%;
+}
+.spacer {
+	width:100%;
+	height:15px;
+}
+hr {
+	border:0px;
+	color:#CCCCCC;
+	background-color:#CDCDCD;
+	height: 1px;
+	width: 100%;
+	text-align: center;
+}
+h1 {
+	font-size:28px;
+	color:#0098D4;
+	background-color:#FFFFFF;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-weight:300;
+}
+h2 {
+	font-size:20px;
+	color:#777777;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	font-weight:300;
+	background-color:#FFFFFF;
+}
+h3 {
+	cursor:default;
+	color:#0098D4;
+	font-size:15px;
+	background-color:#F9F9F9;
+	border-width:1px;
+	border-color:#AAAAAA;
+	border-style:solid;
+	text-align:left;
+	margin-left:20px;
+	margin-right:20px;
+	font-weight:300;
+	padding:5px;
+}
+.top_main_heading {
+	margin-top:15px;
+}
+.featured_heading {
+	font-size:20px;
+	margin-top:15px;
+}
+.DEBUG {
+    color:red;
+}
+.sector {
+	margin-top:15px;
+	margin-bottom:15px;
+    font-size:20px;
+	margin-top:15px;
+}
+#left {
+	float:left;
+	width:200px;
+	background-color:#FFFFFF;
+	color:#AAAAAA;
+}
+#leftcontent p {
+	color:#AAAAAA;
+	background-color:#FFFFFF;
+	font-size: 12px;
+	text-align:left;
+	margin-left:20px;
+	margin-right:20px;
+}
+#leftcontent ul {
+	cursor:default;
+	list-style:none;
+	padding-left:20px;
+	color:#777777;
+	background-color:#FFFFFF;
+}
+#leftcontent a {
+	color:#0098D4;
+	text-decoration:none;
+	font-size:16px;
+	background-color:#FFFFFF;
+}
+.warning {
+	color:#999999;
+	border-bottom:1px;
+	border-left:1px;
+	border-right:1px;
+	border-top:0px;
+	border-style:solid;
+	border-color:#AAAAAA;
+	background-color:#FFFFFF;
+	line-height:20px;
+	padding:5px;
+}
+#leftcontent a:hover {
+	color:#0098D4;
+	background-color:#FFFFFF;
+	text-decoration:underline;
+}
+#main {
+	float:left;
+	width:640px;
+	color:#999999;
+	background-color:#FFFFFF;
+	padding-bottom:20px;
+	background:url('/static/IMG/virt_line.png');
+  background-repeat: repeat-y;
+}
+#maincontent p {
+	cursor:default;
+	color:#555555;
+	background-color:#FFFFFF;
+	border-bottom:1px;
+	border-left:1px;
+	border-right:1px;
+	border-top:0px;
+	border-style:solid;
+	border-color:#AAAAAA;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:15px;
+	line-height:20px;
+	padding:20px;
+}
+.featured_paragraph {
+    font-size:15px;
+}
+.NoBottom {
+    font-size:15px;
+    border-bottom:0px;
+	margin-bottom:0px;
+}
+.DEBUG {
+    color:red;
+}
+#maincontent ul {
+	cursor:default;
+	color:#555555;
+	background-color:#FFFFFF;
+	border-bottom:0px;
+	border-left:1px;
+	border-right:1px;
+	border-top:0px;
+	border-style:solid;
+	border-color:#AAAAAA;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:0px;
+	line-height:20px;
+	padding:20px;
+	font-size:15px;
+}
+#maincontent a {
+	color:#1500FF;
+	background-color:#FFFFFF;
+	text-decoration:none;
+}
+#maincontent a:hover {
+	color:#1500FF;
+	background-color:#FFFFFF;
+	text-decoration:underline;
+}
+#maincontent ul {
+	cursor:default;
+	color:#555555;
+	background-color:#FFFFFF;
+	border-bottom:1px;
+	border-left:1px;
+	border-right:1px;
+	border-top:0px;
+	border-style:solid;
+	border-color:#AAAAAA;
+	margin-top:0px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom:0px;
+	line-height:20px;
+	padding:20px;
+}
+#maincontent img {
+	width:25%
+}
+#maincontent b {
+}
+.LogoName{
+	font-size:40px;
+}
+#footer {
+	cursor:default;
+	clear:both;
+	width:840px;
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+#footer a {
+	color:#555555;
+	text-decoration:none;
+}
+#footer a:hover {
+	color:#555555;
+	text-decoration:underline;
+}
+#footer img{
+    height: 18px
+}
+#footer img:hover{
+    height: 20px
+}
+.right {
+	color:#555555;
+	float:right;
+	font-size:100%;
+	margin-top:5px;
+}
+.left {
+	color:#555555;
+	float:left;
+	font-size:100%;
+	margin-top:5px;
+}

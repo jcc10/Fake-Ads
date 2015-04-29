@@ -3,7 +3,7 @@ body {
 	font-size:12px;
 	/* cursor:default; */
 	color:#FF0000;
-	background: url('http://static.caus-solutions.com/img/page_bg.png') top left repeat-x #c8c8c8;
+	background: url('/static/IMG/page_bg.png') top left repeat-x #c8c8c8;
 }
 * {
 	margin: 0px;
@@ -136,7 +136,7 @@ h3 {
 	color:#999999;
 	background-color:#FFFFFF;
 	padding-bottom:20px;
-	background:url('http://static.caus-solutions.com/img/virt_line.png');
+	background:url('/static/IMG/virt_line.png');
   background-repeat: repeat-y;
 }
 #maincontent p {

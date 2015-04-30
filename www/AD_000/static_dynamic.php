@@ -19,7 +19,7 @@ function sd_side($origin) {
 	global $IAM_relative;
 	$TmpLoc = $IAM_relative . "www/sidebar.php";
 	include $TmpLoc;
-	sidebar_main();
+	sidebar_main($origin);
 }
 function sd_side_item($Text, $Link, $Source) {
 	$tab = "\t\t\t\t\t\t";
@@ -30,6 +30,7 @@ function sd_side_item($Text, $Link, $Source) {
 	}
 }
 function sd_foot() {
+	global $fa_my_domain;
 	// Left
 	$sd_tab = "\t\t\t\t";
 	echo "<p class=\"left\">\n";

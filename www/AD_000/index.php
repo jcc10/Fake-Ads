@@ -15,7 +15,7 @@
 				<div id="leftcontent">
 
 					<?php
-						sd_side("Example Ad ~ 01");
+						sd_side("Example Ad ~ 00");
 					?>
 					<p>&nbsp;</p>
 					<h3>Disclaimer</h3>
@@ -30,8 +30,25 @@
 				<!-- BEGIN UserAgent PHP CODE -->
 <?php
 /*				BEGIN CODE				*/
-$TmpLoc = $local_directory . "www/AD_001/ExampleCode.php";
+$TmpLoc = $local_directory . "www/AD_000/ExampleCode.php";
 include $TmpLoc;
+
+// Prints Debug Data
+function PDBM($IP, $GeoIP, $UserAgent) {
+	$IPpost = "IP: " . $IP . "<br />\n";
+	$GeoIPpost = "";
+	
+	foreach ($GeoIP as $Key => $Data) {
+		$GeoIPpost = $GeoIPpost . $Key . ": \"" . $Data . "\"<br />\n";
+	}
+	$UserAgentPost = "";
+	
+	foreach ($UserAgent as $Key => $Data) {
+		$UserAgentPost = $UserAgentPost . $Key . ": \"" . $Data . "\"<br />\n";
+	}
+	$todbg = $IPpost . "<b>UserAgent Data:</b><br />\n" . $UserAgentPost . "<b>GeoIP:</b><br />\n" . $GeoIPpost . "<br />\n";
+	dbg($todbg);
+}
 
 // Prints Browser Data 
 function PrintBrowser($BrowserArray, $ImgDir) {
@@ -88,6 +105,13 @@ function main($IP, $GeoIP, $UserAgent) {
 	$BrowserData = IdentifyBrowser($UserAgent);
 	$OsData = IdentifyOperatingSystems($UserAgent);
 	
+	// Am I in debug mode?
+	if (isset($_GET["DBG"])) {
+		if ($_GET["DBG"] == "1") {
+			PDBM($IP, $GeoIP, $UserAgent);
+		}
+	}
+	
 	// Call Browser Printer
 	PrintBrowser($BrowserData, $implement["IMG DIR BROWSERS"]);
 	PrintOS($OsData, $implement["IMG DIR OS"]);
@@ -97,18 +121,6 @@ function main($IP, $GeoIP, $UserAgent) {
 		$TMPl = strtolower($TMPr);
 		$TMP2r = $UserAgent["os_name"];
 		$TMP2l = strtolower($TMP2r);
-		if ($TMPl == "windows") {
-			if ($TMP2l == "windows 7") {
-				send("OS: Windows 7", "<img src=\"./logos/Win7.png\" alt=\"Windows 7 Logo\"></img> &nbsp;&nbsp;&nbsp;<b class=\"LogoName\">Windows 7</b>");
-			} elseif ($TMP2l == "windows nt") {
-				send("OS: Windows 8", "<img src=\"./logos/Win8.png\" alt=\"Windows 8 Logo\"></img> &nbsp;&nbsp;&nbsp;<b class=\"LogoName\">Windows 8</b>");
-			} elseif ($TMP2l == "windows vista") {
-				send("OS: Windows 8", "<img src=\"./logos/WinVista.png\" alt=\"Windows Vista Logo\"></img> &nbsp;&nbsp;&nbsp;<b class=\"LogoName\">Windows Vista</b>");
-			} elseif ($TMP2l == "windows xp") {
-				send("OS: Windows XP", "<!--<img src=\"./logos/WinUnknown.png\" alt=\"Windows Logo\"></img>-->NEED IMAGE! &nbsp;&nbsp;&nbsp;<b class=\"LogoName\">Windows XP</b>");
-			} else {
-				send("OS: Unknown Windows", "<img src=\"./logos/WinUnknown.png\" alt=\"Windows Logo\"></img> &nbsp;&nbsp;&nbsp;<b class=\"LogoName\">Windows</b><br />Unknown version.<br />Please contact us with both the OS short and long below.<br />OS short: $TMPr<br />OS long: $TMP2l");
-			}
 		} elseif ($TMPl == "android") {
 			send("OS: Android", "NEED IMAGE! &nbsp;&nbsp;&nbsp;<b class=\"LogoName\">Android</b><br />Details: See LINUX DETAILS");
 		} else {
@@ -154,6 +166,8 @@ $RawAPI_UserAgent = getUserAgent();
 $RawAPI_GeoIP = getGeoIPdata($remoteIP);
 $printedData = 0;
 main($remoteIP, $RawAPI_GeoIP, $RawAPI_UserAgent);
+
+//send("Options", "<form action=\"" . $_SERVER['PHP_SELF'] . "\" method=\"post\">\n\tDebug: <select name=\"DBG\">\n\t\t<option value=\"FALSE\">Off</option>\n\t\t<option value=\"TRUE\">On</option>\n\t</select>\n\t<input type=\"submit\" name=\"btnSendForm\" value=\"Use Settings\" >/n</form>")
 
 // GenLog
 //$data = $remoteIP . "~" . $RawAPI_GeoIP . "~" . $RawAPI_UserAgent . date("c");

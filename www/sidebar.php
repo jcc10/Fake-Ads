@@ -1,12 +1,13 @@
 <?php
 	function sidebar_main($origin) {
+		global $fa_my_domain;
 		$tab = "\t\t\t\t\t\t";
 		echo "<ul>\n";
 		echo "$tab<li>Navigation</li>\n";
 		$tmpItem = $fa_my_domain . "/index.php";
 		sd_side_item("Home", $tmpItem, $origin);
-		$tmpItem = $fa_my_domain ."/AD_001/index.php";
-		sd_side_item("Example Ad ~ 01", $tmpItem, $origin);
+		$tmpItem = $fa_my_domain ."/AD_000/index.php";
+		sd_side_item("Example Ad ~ 00", $tmpItem, $origin);
 		//$tmpItem = sd_fake_ads . "/";
 		//sd_head_item("Our Services", $tmpItem, $origin);
 		//$tmpItem = sd_fake_ads . "/index.php";

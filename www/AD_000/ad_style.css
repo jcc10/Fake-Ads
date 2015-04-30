@@ -166,22 +166,6 @@ h3 {
 .DEBUG {
     color:red;
 }
-#maincontent form {
-	cursor:default;
-	color:#555555;
-	background-color:#FFFFFF;
-	border-bottom:1px;
-	border-left:1px;
-	border-right:1px;
-	border-top:0px;
-	border-style:solid;
-	border-color:#AAAAAA;
-	margin-left:20px;
-	margin-right:20px;
-	margin-bottom:15px;
-	line-height:20px;
-	padding:20px;
-}
 #maincontent ul {
 	cursor:default;
 	color:#555555;

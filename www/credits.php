@@ -30,22 +30,22 @@
 			<div id="main">
 				<div id="maincontent">
 
-					<!-- Template -->
+					<!-- Who built this? -->
 					<h3 class="top_main_heading">Template</h3>
 					<p>Click <a href="credits_template.php">HERE</a> to view who coded the main site's template.
 					</p>
 					
-					<!-- Ad Coders -->
-					<h3>Ad Coders</h3>
+					<!-- Revision 1 -->
+					<h3>Ad's</h3>
 					<p>Click HERE to view who coded each AD!</p>
 					
-					<!-- Core Code -->
+					<!-- Revision 2 -->
 					<h3>Core Code</h3>
 					<p>Click HERE to view who coded the Core Code for this project!</p>
 					
-					<!-- API's -->
-					<h3>API's</h3>
-					<p>The API's that this website uses.</p>
+					<!-- Revision 3 -->
+					<!--<h3>Other</h3>
+					<p>Other notable people who don't really fit into any category.</p>-->
 				</div> <!-- end main content section -->
 			</div> 
 			<div id="footer"><div class="spacer"></div>

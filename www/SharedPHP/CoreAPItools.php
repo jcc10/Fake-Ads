@@ -35,8 +35,28 @@ function getGeoIPdata($IP) {
 }
 
 function ISP_DB($RawISPname) {
-	//Deprecated -- Use ISPs.php
-	return $RawISPname;
+	$UseDB = 10;
+	
+	if ($UseDB == 0) {
+		// Primary DB
+		// Backup DB
+		$request = "http://ads.caus-solutions.com/ISP.json";
+		$response = file_get_contents($request);
+	} elseif ($UseDB == 1) {
+		// Backup DB
+		$request = "http://pastebin.com/raw.php?i=";
+		$response = file_get_contents($request);
+	} else {
+		return $RawISPname;
+	}
+	$low = strtolower($RawISPname);
+	$decoded = json_decode($response, true);
+	if (array_key_exists($low, $decoded) == true) {
+		return $decoded[$low];
+	} else {
+		return $RawISPname;
+	}
+	
 }
 
 function isThereData($data) {

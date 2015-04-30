@@ -35,29 +35,68 @@ include $TmpLoc;
 
 // Prints Debug Data
 function PDBM($IP, $GeoIP, $UserAgent) {
-	$IPpost = "<li><b>IP:</b> " . $IP . "</li>\n";
+	$IPpost = "IP: " . $IP . "<br />\n";
 	$GeoIPpost = "";
 	
 	foreach ($GeoIP as $Key => $Data) {
-		$GeoIPpost = $GeoIPpost . "<li>" . $Key . ": \"" . $Data . "\"</li>\n";
+		$GeoIPpost = $GeoIPpost . $Key . ": \"" . $Data . "\"<br />\n";
 	}
 	$UserAgentPost = "";
 	
 	foreach ($UserAgent as $Key => $Data) {
-		$UserAgentPost = $UserAgentPost . "<li>" . $Key . ": \"" . $Data . "\"</li>\n";
+		$UserAgentPost = $UserAgentPost . $Key . ": \"" . $Data . "\"<br />\n";
 	}
-	$todbg = $IPpost . "<li><b>UserAgent Data:</b></li>\n" . $UserAgentPost . "<li><b>GeoIP:</b></li>\n" . $GeoIPpost . "\n";
-		echo("\t\t\t\t\t<h3 class=\"DEBUG\">&nbsp;&nbsp;&nbsp;" . "Debug Data" . "</h3>\n");
-		echo("\t\t\t\t\t\t<ul>" . $todbg . "</ul>\n");
+	$todbg = $IPpost . "<b>UserAgent Data:</b><br />\n" . $UserAgentPost . "<b>GeoIP:</b><br />\n" . $GeoIPpost . "<br />\n";
+	dbg($todbg);
 }
 
-// Load PrintBrowser
-$TmpLoc = $local_directory . "www/AD_000/PrintBrowser.php";
-include $TmpLoc;
+// Prints Browser Data 
+function PrintBrowser($BrowserArray, $ImgDir) {
+	$tabs = "\t\t\t\t\t\t\t\t";
+	// Browser or not a Browser
+	if ($BrowserArray["IsBrowser"] == "FALSE") {
+		send("NOT A BROWSER!!!", "You are not a browser and so this may not work for you, just a heads up!", "true");
+	} else {
+		Null;
+	}
+	//Sector Tag AFTER we display the error (If we do display the error...)
+	sector("User-Agent Data");
+		//All of the Browser Print Code!
+		if ($BrowserArray["BrowserIdentified"] == "TRUE") {
+			$outputH = "Browser: " . $BrowserArray["BrowserShort"];
+			$outputB = "<img src=\"" . $ImgDir . $BrowserArray["BrowserImg"] . "\" alt=\"" . $BrowserArray["BrowserImgAlt"] . "\"></img><b class=\"LogoName\">" . $BrowserArray["BrowserName"] . "</b>\n";
+			$outputB = $outputB . $tabs . "<br />&nbsp;<br />\n";
+			$outputB = $outputB . $tabs . "Browser version: " . $BrowserArray["BrowserVersion"] . "<br />\n";
+			$outputB = $outputB . $tabs . "Developers: " . $BrowserArray["BrowserCompany"] . "<br />\n" . "\t\t\t\t\t\t\t";
+			send($outputH, $outputB);
+		} else {
+			$outputH = "Browser: " . $BrowserArray["BrowserShort"];
+			$outputB = "<img src=\"" . $ImgDir . $BrowserArray["BrowserImg"] . "\" alt=\"" . $BrowserArray["BrowserImgAlt"] . "\"></img> Your browser is not in our Database<br /> Please send us the following text:<br />Browser Name:" . $BrowserArray["BrowserShort"] . "";
+			$outputB = $outputB . $tabs . "Browser version: " . $BrowserArray["BrowserVersion"] . "<br />\n" . "\t\t\t\t\t\t\t";
+			send($outputH, $outputB);
+		}
+}
 
-// Load PrintOS
-$TmpLoc = $local_directory . "www/AD_000/PrintOS.php";
-include $TmpLoc;
+// Prints OS Data
+function PrintOS($OSdata, $ImgDir) {
+	$tabs = "\t\t\t\t\t\t\t\t";
+	$outputH = "OS: " . $OSdata["FullName"];
+	$outputB = "<img src=\"" . $ImgDir . $OSdata["OS_Image"] . "\" alt=\"" . $OSdata["ImageAlt"] . "\"></img> &nbsp;&nbsp;&nbsp;<b class=\"LogoName\">" . $OSdata["FullName"] . "</b>\n";
+	$outputB = $outputB . $tabs . "<br /> &nbsp; <br /> &nbsp; <br />\n";
+	$outputB = $outputB . $tabs . "OS Arch: " . $OSdata["Arch"] . "<br />\n";
+	$outputB = $outputB . $tabs . "OS Version: " . $OSdata["Version"] . "<br />\n";
+	$outputB = $outputB . $tabs . "OS Version Name: " . $OSdata["Version Name"] . "<br />\n";
+	$outputB = $outputB . $tabs . "OS Producer: <a href=\"" . $OSdata["Producer URL"] . "\">" . $OSdata["Producer"] . "</a>";
+	if ($OSdata["Notes"] != "None") {
+		$outputB = $outputB . "<br />/n";
+		$outputB = $outputB . $tabs . "Notes: " . $OSdata["Notes"];
+	}
+	$outputB = $outputB . "\n" . "\t\t\t\t\t\t\t";
+	send($outputH, $outputB);
+	if ($OSdata["LinuxPannel"] == "TRUE") {
+		Null;
+	}
+}
 
 //	Main
 function main($IP, $GeoIP, $UserAgent) {
@@ -68,7 +107,7 @@ function main($IP, $GeoIP, $UserAgent) {
 	
 	// Am I in debug mode?
 	if (isset($_GET["DBG"])) {
-		if (($_GET["DBG"] == "TRUE") or ($_GET["DBG"] == "1")) {
+		if ($_GET["DBG"] == "1") {
 			PDBM($IP, $GeoIP, $UserAgent);
 		}
 	}
@@ -76,7 +115,18 @@ function main($IP, $GeoIP, $UserAgent) {
 	// Call Browser Printer
 	PrintBrowser($BrowserData, $implement["IMG DIR BROWSERS"]);
 	PrintOS($OsData, $implement["IMG DIR OS"]);
-	
+	/*
+		// OS precise Arch name
+		$TMPr = $UserAgent["os_type"];
+		$TMPl = strtolower($TMPr);
+		$TMP2r = $UserAgent["os_name"];
+		$TMP2l = strtolower($TMP2r);
+		} elseif ($TMPl == "android") {
+			send("OS: Android", "NEED IMAGE! &nbsp;&nbsp;&nbsp;<b class=\"LogoName\">Android</b><br />Details: See LINUX DETAILS");
+		} else {
+			send("OS: Unknown", "OS short: $TMPr<br />OS long: $TMP2l<br />Please contact us with both the OS short and long above.");
+		}
+		*/
 	// IP
 	sector("IP");
 		send("IP", $IP);
@@ -117,9 +167,7 @@ $RawAPI_GeoIP = getGeoIPdata($remoteIP);
 $printedData = 0;
 main($remoteIP, $RawAPI_GeoIP, $RawAPI_UserAgent);
 
-//What to send (Options for the body)
-echo "\t\t\t\t\t\t<h3>&nbsp;&nbsp;&nbsp;Options</h3>\n";
-echo "\t\t\t\t\t\t\t" . "<form action=\"" . $_SERVER['PHP_SELF'] . "\" method=\"get\">\n\tDebug: <select name=\"DBG\">\n\t\t<option value=\"FALSE\">Off</option>\n\t\t<option value=\"TRUE\">On</option>\n\t</select>\n\t<input type=\"submit\" value=\"Send Data\"></form>" . "\n";
+//send("Options", "<form action=\"" . $_SERVER['PHP_SELF'] . "\" method=\"post\">\n\tDebug: <select name=\"DBG\">\n\t\t<option value=\"FALSE\">Off</option>\n\t\t<option value=\"TRUE\">On</option>\n\t</select>\n\t<input type=\"submit\" name=\"btnSendForm\" value=\"Use Settings\" >/n</form>")
 
 // GenLog
 //$data = $remoteIP . "~" . $RawAPI_GeoIP . "~" . $RawAPI_UserAgent . date("c");

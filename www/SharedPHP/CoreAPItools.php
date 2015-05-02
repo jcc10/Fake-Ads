@@ -52,7 +52,11 @@ function isThereData($data) {
 		return "FALSE";
 	} elseif ($data == Null){
 		return "FALSE";
-	} else {
+	} elseif (empty($data) == True) {
+		return "FALSE";
+	} elseif ($data == "None") {
+		return "FALSE";
+	}else {
 		return "TRUE";
 	}
 }

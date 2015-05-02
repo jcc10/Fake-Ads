@@ -13,11 +13,9 @@
 			$output["LinuxPannel"] = "FALSE";
 			$TmpLoc = $local_directory . "www/SharedPHP/OS_Windows.php";
 			include $TmpLoc;
-			$output = OS_WIN($CheckUserAgent, $output, $UserAgent);
 		} elseif ($CheckUserAgent["os_type"] == "android") {
 			$TmpLoc = $local_directory . "www/SharedPHP/OS_Android.php";
 			include $TmpLoc;
-			OS_DROID($CheckUserAgent, $output, $UserAgent);
 		} elseif ($CheckUserAgent["os_type"] == "TRUE") {
 			Null;
 		} elseif ($CheckUserAgent["os_type"] == "TRUE") {

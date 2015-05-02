@@ -25,10 +25,12 @@ function PDBM($IP, $GeoIP, $UserAgent) {
 }
 
 // Load PrintBrowser
+// PrintBrowser($BrowserArray, $ImgDir)
 $TmpLoc = $local_directory . "www/AD_000/PrintBrowser.php";
 include $TmpLoc;
 
 // Load PrintOS
+// PrintOS($OSdata, $ImgDir)
 $TmpLoc = $local_directory . "www/AD_000/PrintOS.php";
 include $TmpLoc;
 
@@ -94,11 +96,5 @@ main($remoteIP, $RawAPI_GeoIP, $RawAPI_UserAgent);
 echo "\t\t\t\t\t\t<h3>&nbsp;&nbsp;&nbsp;Options</h3>\n";
 echo "\t\t\t\t\t\t\t" . "<form action=\"" . $_SERVER['PHP_SELF'] . "\" method=\"get\">\n\tDebug: <select name=\"DBG\">\n\t\t<option value=\"FALSE\">Off</option>\n\t\t<option value=\"TRUE\">On</option>\n\t</select>\n\t<input type=\"submit\" value=\"Send Data\"></form>" . "\n";
 
-// GenLog
-//$data = $remoteIP . "~" . $RawAPI_GeoIP . "~" . $RawAPI_UserAgent . date("c");
-//$filename = "/home/ClineJ/CSsite/Example_ads/Example.log";
-//file_put_contents( $filename , $data , FILE_APPEND | LOCK_EX);
-
 /*				END CODE				*/
-
 ?>

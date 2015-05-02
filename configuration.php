@@ -5,5 +5,6 @@ $sd_host_URL = "http://www.caus-solutions.com";
 $fa_my_domain = "";
 $local_directory = "/WebFiles/dev/dev/";
 $test_local_directory = getcwd();
+$GLOBALS["DevPro_Mode"] = "dev";
 
 ?>

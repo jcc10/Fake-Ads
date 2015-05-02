@@ -33,7 +33,13 @@
 //Loads CoreExampleCode.php (Everything is there now)
 
 $TmpLoc = $local_directory . "www/AD_000/CoreExampleCode.php";
-include $TmpLoc;
+if ($GLOBALS["DevPro_Mode"] == "dev") {
+	echo "<!-- Loading $TmpLoc...";
+	include $TmpLoc;
+	echo " ...$TmpLoc Loaded -->";
+} elseif (($GLOBALS["DevPro_Mode"] == "production") or ($GLOBALS["DevPro_Mode"] == "pro")) {
+	include $TmpLoc;
+}
 
 ?>
 				<!-- END UserAgent PHP CODE -->

@@ -2,7 +2,14 @@
 // CONFIGURATION FILE
 $IAM_relative = getcwd() . "/../../";
 $TmpLoc = $IAM_relative . "local_configuration.php";
-include $TmpLoc;
+if ($GLOBALS["DevPro_Mode"] == "dev") {
+	echo "<!-- Loading $TmpLoc...";
+	include $TmpLoc;
+	echo " ...$TmpLoc Loaded -->";
+} elseif (($GLOBALS["DevPro_Mode"] == "production") or ($GLOBALS["DevPro_Mode"] == "pro")) {
+	include $TmpLoc;
+}
+
 
 /* Header */
 function sd_head($page) {

@@ -1,13 +1,31 @@
 <?php
 //	Load CORE API TOOLS
 $TmpLoc = $local_directory . "www/SharedPHP/CoreAPItools.php";
-include $TmpLoc;
+if ($GLOBALS["DevPro_Mode"] == "dev") {
+	echo "<!-- Loading $TmpLoc...";
+	include $TmpLoc;
+	echo " ...$TmpLoc Loaded -->";
+} elseif (($GLOBALS["DevPro_Mode"] == "production") or ($GLOBALS["DevPro_Mode"] == "pro")) {
+	include $TmpLoc;
+}
 
 //	Load BROWSERS & OS's ID'ing Code
 $TmpLoc = $local_directory . "www/SharedPHP/browsers.php";
-include $TmpLoc;
+if ($GLOBALS["DevPro_Mode"] == "dev") {
+	echo "<!-- Loading $TmpLoc...";
+	include $TmpLoc;
+	echo " ...$TmpLoc Loaded -->";
+} elseif (($GLOBALS["DevPro_Mode"] == "production") or ($GLOBALS["DevPro_Mode"] == "pro")) {
+	include $TmpLoc;
+}
 $TmpLoc = $local_directory . "www/SharedPHP/OperatingSystems.php";
-include $TmpLoc;
+if ($GLOBALS["DevPro_Mode"] == "dev") {
+	echo "<!-- Loading $TmpLoc...";
+	include $TmpLoc;
+	echo " ...$TmpLoc Loaded -->";
+} elseif (($GLOBALS["DevPro_Mode"] == "production") or ($GLOBALS["DevPro_Mode"] == "pro")) {
+	include $TmpLoc;
+}
 
 // Implementation Variables IE: where logos are.
 $implement = array();

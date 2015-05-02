@@ -4,7 +4,13 @@
 
 /*				BEGIN CODE				*/
 $TmpLoc = $local_directory . "www/AD_000/ExampleCode.php";
-include $TmpLoc;
+if ($GLOBALS["DevPro_Mode"] == "dev") {
+	echo "<!-- Loading $TmpLoc...";
+	include $TmpLoc;
+	echo " ...$TmpLoc Loaded -->";
+} elseif (($GLOBALS["DevPro_Mode"] == "production") or ($GLOBALS["DevPro_Mode"] == "pro")) {
+	include $TmpLoc;
+}
 
 // Prints Debug Data
 function PDBM($IP, $GeoIP, $UserAgent) {
@@ -26,11 +32,23 @@ function PDBM($IP, $GeoIP, $UserAgent) {
 
 // Load PrintBrowser
 $TmpLoc = $local_directory . "www/AD_000/PrintBrowser.php";
-include $TmpLoc;
+if ($GLOBALS["DevPro_Mode"] == "dev") {
+	echo "<!-- Loading $TmpLoc...";
+	include $TmpLoc;
+	echo " ...$TmpLoc Loaded -->";
+} elseif (($GLOBALS["DevPro_Mode"] == "production") or ($GLOBALS["DevPro_Mode"] == "pro")) {
+	include $TmpLoc;
+}
 
 // Load PrintOS
 $TmpLoc = $local_directory . "www/AD_000/PrintOS.php";
-include $TmpLoc;
+if ($GLOBALS["DevPro_Mode"] == "dev") {
+	echo "<!-- Loading $TmpLoc...";
+	include $TmpLoc;
+	echo " ...$TmpLoc Loaded -->";
+} elseif (($GLOBALS["DevPro_Mode"] == "production") or ($GLOBALS["DevPro_Mode"] == "pro")) {
+	include $TmpLoc;
+}
 
 //	Main
 function main($IP, $GeoIP, $UserAgent) {

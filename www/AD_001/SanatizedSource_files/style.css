@@ -1,0 +1,166 @@
+html {
+}
+
+body {
+    margin: 0;
+    padding: 15px;
+    font-family: 'Helvetica Neue', 'Arial';
+    font-weight: 200;
+    font-size: 12px;
+    color: #353535;
+    background: #ffffff;
+}
+
+table, td {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+img {
+    border: 0;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6, h7, p, ul, ol, li, form {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.radio {
+    vertical-align: middle;
+}
+
+strong {
+    font-weight: 700;
+}
+
+select, input, textarea, option {
+    padding: 0;
+    margin: 0;
+    font-size: 11px;
+    font-family: 'Arial';
+    color: #333333;
+    outline: none;
+}
+
+a {
+    color: #00b4ff;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    transition: 0.3s ease-out;
+}
+
+a:hover {
+    color: #000000;
+    transition: 0.3s ease-out;
+}
+
+div.br {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+
+::-moz-selection {
+    background: #000000;
+    color: #ffffff;
+}
+
+::selection {
+    background: #000000;
+    color: #ffffff;
+}
+
+/*********************************************/
+div.page {
+    width: 830px;
+    margin: auto;
+    background: #ebebeb url('images/page.png') no-repeat 50% 0;
+    color: #b4b4b4;
+    position: relative;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 10px 75px;
+    text-align: center;
+}
+
+div.tt {
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 40px;
+    text-shadow: -1px -1px 0 #aeaeae, 0 0 8px #cccccc;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+div.inner {
+    background: #ffffff;
+    color: #969494;
+    border: 1px solid #d3d3d3;
+    border-bottom: 2px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+div.file {
+    font-size: 18px;
+    color: #00b4ff;
+    text-decoration: underline;
+}
+
+div.file div {
+    display: inline;
+}
+
+div.file img {
+    margin: 0 30px -4px 30px;
+}
+
+p.x {
+    font-size: 36px;
+    color: #000000;
+}
+
+a.dlink {
+    display: block;
+    width: 240px;
+    border-radius: 10px;
+    line-height: 48px;
+    text-align: center;
+    color: #ffffff;
+    margin: 15px auto;
+}
+
+a.dlink-1 {
+    background: #00b4ff;
+    font-size: 24px;
+}
+
+a.dlink-2 {
+    background: #959595;
+    font-size: 18px;
+}
+
+a.dlink-1:hover {
+    background: #008bbf;
+}
+
+a.dlink-2:hover {
+    background: #707070;
+}
+
+p.menu a {
+    color: #000000;
+    margin: 0 3px;
+}
+
+p.menu a:hover {
+    color: #999999;
+}
